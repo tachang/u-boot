@@ -7,8 +7,10 @@ static int do_jzsoc(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	type = get_t20_type();
 	if ((type>=0)&&(type<T20_TYPE_END)) {
 		printf("SOC: %s\n", t20_soc_type_str[type]);
+		setenv("soctype", t20_soc_type_str[type]);
 	} else {
 		printf("SOC: %s\n", "NULL");
+		setenv("soctype", "unknown");
 	}
 	return 0;
 }

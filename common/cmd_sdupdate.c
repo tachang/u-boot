@@ -35,7 +35,7 @@
 #define AU_UBOOT	"u-boot"
 #define AU_KERNEL	"kernel"
 #define AU_ROOTFS	"rootfs"
-#define AU_FW		"demo.bin"
+#define AU_FW		"firmware.bin"
 
 struct flash_layout {
 	long start;
@@ -53,11 +53,11 @@ struct medium_interface {
 #define AU_FL_UBOOT_ST	0x0
 #define AU_FL_UBOOT_ND	0x40000
 #define AU_FL_KERNEL_ST		0x40000
-#define AU_FL_KERNEL_ND		0x2C0000
-#define AU_FL_ROOTFS_ST		0x2C0000
-#define AU_FL_ROOTFS_ND		0x4C0000
+#define AU_FL_KERNEL_ND		0x240000
+#define AU_FL_ROOTFS_ST		0x240000
+#define AU_FL_ROOTFS_ND		0x590000
 #define AU_FL_FW_ST			0x000000
-#define AU_FL_FW_ND			0x1000000
+#define AU_FL_FW_ND			0x590000
 
 static int au_stor_curr_dev; /* current device */
 

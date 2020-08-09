@@ -491,6 +491,7 @@ static int do_spi_flash(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[
 
 	if (strcmp(cmd, "probe") == 0) {
 		ret = do_spi_flash_probe(argc, argv);
+		setenv("flashtype", flash->name);
 		goto done;
 	}
 
